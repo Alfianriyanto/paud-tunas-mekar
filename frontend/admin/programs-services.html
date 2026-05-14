@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Program & Layanan</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/style.css"
+  >
+
+</head>
+
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="main-content">
+
+  <div id="topbar-container"></div>
+
+  <div class="content-wrapper">
+
+    <div class="card p-4 mb-4">
+
+      <h5 class="mb-4">
+        Add Program & Layanan
+      </h5>
+
+      <form id="programForm">
+
+        <input
+          type="hidden"
+          id="programId"
+        >
+
+        <div class="mb-3">
+
+          <label>Title</label>
+
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+          >
+
+        </div>
+
+        <div class="mb-3">
+
+          <label>Image</label>
+
+          <input
+            type="file"
+            class="form-control"
+            id="image"
+          >
+
+        </div>
+
+        <div class="mb-3">
+
+          <label>Description</label>
+
+          <div
+            id="editor"
+            style="height:250px;"
+          ></div>
+
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          Save Program
+        </button>
+
+      </form>
+
+    </div>
+
+    <div class="card p-4">
+
+      <h5 class="mb-4">
+        List Program & Layanan
+      </h5>
+
+      <div class="table-responsive">
+
+        <table class="table table-bordered">
+
+          <thead>
+
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+
+          </thead>
+
+          <tbody id="programTable"></tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<script src="../assets/js/api.js"></script>
+
+<script src="../assets/js/auth.js"></script>
+
+<script src="../assets/js/layout.js"></script>
+
+<script src="../assets/js/programs-services.js"></script>
+
+<script>
+
+  checkAuth();
+
+  initLayout('Program & Layanan');
+
+</script>
+
+</body>
+</html>

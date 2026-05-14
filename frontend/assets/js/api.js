@@ -1,0 +1,1 @@
+const BASE_URL = "https://paud-tunas-mekar-production.up.railway.app/api";
